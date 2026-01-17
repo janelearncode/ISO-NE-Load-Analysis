@@ -1,22 +1,30 @@
 # Energy-Load-Forecasting-OpenSTEF-Study-Implementation
-1. Summary:
-This project is a self‑implemented study of short‑term electrical load forecasting, inspired by industry tools such as OpenSTEF. 
-The goal was to understand how energy demand can be predicted using historical data and basic statistical models, while gaining hands‑on experience with data preprocessing, modeling, and evaluation.
+I. Summary
+This project is a self‑implemented study of short‑term electrical load forecasting, inspired by industry tools such as OpenSTEF. Goal: Understand how energy demand can be predicted using historical data and basic statistical models, while gaining hands‑on experience with data preprocessing, modeling, and evaluation.
 
 This project was built independently as a learning and portfolio exercise and does not claim authorship of OpenSTEF or related industry frameworks.
 
-Accurate short‑term load forecasting is critical for:
-- Grid reliability and safety
-- Energy planning and efficiency
-- Integration of renewable energy sources
-
 As an electrical engineering student interested in safety‑critical systems and data‑driven decision‑making, this project helped bridge power systems concepts with practical data analysis.
 
-Given historical electrical load data, can we predict short‑term future demand (hours to days ahead) using simple, interpretable models?
+II. Data
+- Source: ISO New England (ISO-NE)
+- Resolution: Hourly
+- Variables:
+  - Date
+  - HourEnding
+  - TotalLoad (MW)
 
-2. Pipeline documents:
-Loaded and merged multi-file ISO-NE hourly load data
-Constructed datetime from Date + HourEnding
-Performed time-series sorting and validation
-Analyzed peak demand and daily averages
-Visualized system load trends using MATLAB
+Raw CSV files are not included due to size and data ownership.
+They can be downloaded directly from ISO-NE.
+
+III. Process:
+- Loaded and merged multi-file ISO-NE hourly load data
+- Constructed datetime from Date + HourEnding
+- Analyze peak demand and daily average
+- Compute daily peak and daily average data using 'groupsummary' function
+- Visualized system load trends using MATLAB
+
+IV. Results
+- Daily average and daily peak load trends were identified
+- Peak demand significantly exceeded average load, highlighting
+  operational constraints on the power grid
